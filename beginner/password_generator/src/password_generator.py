@@ -49,15 +49,15 @@ class MemorablePasswordGenerator(PasswordGenerator):
         return self.seperator.join(words)
 
 
-if __name__ == '__main__':
-    # Test RandomPasswordGenerator
-    p_obj = RandomPasswordGenerator()
-    print("Random Password:", p_obj.generate())
+# if __name__ == '__main__':
+#     # Test RandomPasswordGenerator
+#     p_obj = RandomPasswordGenerator()
+#     print("Random Password:", p_obj.generate())
     
-    # Test MemorablePasswordGenerator
-    memorable_obj = MemorablePasswordGenerator(number_of_words=3, seperator='-', capitalization=True)
-    print("Memorable Password (Uppercase):", memorable_obj.generate())
+#     # Test MemorablePasswordGenerator
+#     memorable_obj = MemorablePasswordGenerator(number_of_words=3, seperator='-', capitalization=True)
+#     print("Memorable Password (Uppercase):", memorable_obj.generate())
     
-    # Test PinGenerator
-    pin_obj = PinGenerator(length=6)
-    print("PIN:", pin_obj.generate())
+#     # Test PinGenerator
+#     pin_obj = PinGenerator(length=6)
+#     print("PIN:", pin_obj.generate())
