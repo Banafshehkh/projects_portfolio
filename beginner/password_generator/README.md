@@ -1,25 +1,24 @@
-# Password Generator - OOP Approach
+# Password Generator Dashboard
 
-The purpose of this project is to build a password generator in three different ways:
+## Project Overview
+The 'Password Generator Dashboard' is an interactive web application built with Python and Streamlit. The user is able to either generate the password randomly, as a memorable sequence of words, or as a pin code.
 
-1. Random Passwords
-2. Memorable Passwords
-3. Pin Codes
+## Project Structure
+The project has the following structure:
 
-## How It Works
+- `password_generators.py`: A Python module containing the password generators classes; `RandomPasswordGenerator`, `MemorablePasswordGenerator`, and `PinCodeGenerator`.
+- `dashboard.py`: A Python script using Streamlit to create a web app interface for the password generators.
+- `README.md`: Documentation for the project solution.
 
-The password generator uses the Python `random` module to generate passwords based on user preferences. TEach class is representing a different type of password generation:
+## Getting Started
 
-1. `RandomPasswordGenerator` generates a completely random password of a specified length, optional with numbers, and symbols.
-2. `MemorablePasswordGenerator` creates a password made up of a set number of randomly chosen words from the NLTK English language corpus. It can optionally separate the words with a separator and use capitalized words.
-3. `PinCodeGenerator` creates a numeric password of a specified length.
+Follow the instructions below to run the code.
 
-Each generator class inherits from a base `PasswordGenerator` class. They each override the base class's `generate()` method in order to provide their own unique password generation functionality.
+### Prerequisites
 
-## Requirements
-
-- Python 3.7+
-- NLTK (Natural Language Toolkit)
+- Python 3.6 or later
+- Streamlit
+- NLTK
 
 To install NLTK, use pip:
 
@@ -34,18 +33,24 @@ import nltk
 nltk.download('words')
 ```
 
-## Running the Project
-
-Make sure you've installed all the required dependencies. You can then set your PYTHONPATH, navigate to the 'src' directory and run the project using Python:
+Then install Streamlit using pip:
 
 ```bash
-export PYTHONPATH="${PYTHONPATH}:/your/path/to/main/directory"
-cd src
-python main.py
+pip install streamlit
 ```
 
-Be sure to replace `/your/path/to/main/directory` with the actual path to the directory containing your project.
+You can install all the required dependencies using the `requirements.txt` file:
 
-## Testing
+```bash
+pip install -r requirements.txt
+```
 
-The `main.py` script also includes test cases for each password generator. The script will print out a test password for each generator and run checks to make sure the password matches the expected format.
+## Usage
+
+After following the installation steps, you can run the Streamlit web app as follows:
+
+```sh
+streamlit run dashboard.py
+```
+
+This will open a web page in your default browser running on your localhost.
