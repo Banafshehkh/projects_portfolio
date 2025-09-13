@@ -30,7 +30,6 @@ class PinGenerator(PasswordGenerator):
     def generate(self):
         return ''.join([random.choice(string.digits) for _ in range(self.length)])
 
-
 class MemorablePasswordGenerator(PasswordGenerator):
     def __init__(self, number_of_words, seperator: str = '-', capitalization: bool = False):
         self.number_of_words = number_of_words
